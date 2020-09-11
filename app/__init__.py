@@ -13,7 +13,7 @@ def create_app(config_filename):
     app.config.from_object(config_filename)
     # app.response_class = MyResponse
 
-    from app.users.models import db
+    from app.db import db
     db.init_app(app)
 
     # Blueprints

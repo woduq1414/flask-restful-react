@@ -42,7 +42,7 @@ class Users(Resource):
 
 class IdCheck(Resource):
 
-    def get(self):
+    def get(self, id):
 
         c = User.query.filter_by(id=id).count()
         if c != 0:
@@ -57,7 +57,7 @@ class IdCheck(Resource):
 
 class NicknameCheck(Resource):
 
-    def get(self):
+    def get(self, nickname):
 
         c = User.query.filter_by(nickname=nickname).count()
         if c != 0:
